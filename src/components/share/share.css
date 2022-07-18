@@ -1,0 +1,56 @@
+.form_share {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 20px;
+}
+.form_share  input[type='file'] {
+  display: none;
+}
+.top_share {
+  column-gap: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.top_share input[placeHolder],
+.top_share input {
+  width: 100%;
+  font-size: 14px;
+}
+.bottom_share {
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.bottom_share .bottom_left_share {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.bottom_share .input_control, 
+.bottom_share .input_control label {
+  column-gap: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #333; */
+  cursor: pointer;
+}
+.bottom_share .input_control svg {
+  font-size: 18px;
+}
+.bottom_share .input_control:first-of-type svg {
+  color: #b02d2d;
+}
+.bottom_share .input_control:nth-child(2) svg {
+  color: #0000c5;
+}
+.bottom_share .input_control:nth-child(3) svg {
+  color: darkgreen;
+}
+.bottom_share .input_control:nth-child(4) svg {
+  color: #fdd835;
+}

@@ -1,0 +1,50 @@
+.friends_list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+}
+.friends_list li {
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  min-height: 60px;
+}
+.friends_list li .friend{
+  column-gap: 10px;
+}
+.friends_list li .btns {
+  column-gap: 10px;
+  justify-content: flex-end;
+}
+.sure_btn,
+.friends_list li .btns .btn {
+  transition: .3s;
+  cursor: pointer;
+  color: var(--main-color);
+}
+.friends_list li .btns .btn svg {
+  font-size: 20px;
+}
+.friends_list li .btns .btn.delete_btn {
+  color: #e24242;
+}
+.btns .sure_btn {
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #e24242;
+  cursor: pointer;
+}
+.btns .closeBtn {
+    cursor: pointer;
+    font-size: 21px;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+}
+.friends_list li .btns .btn:hover {
+  opacity: 1;
+}

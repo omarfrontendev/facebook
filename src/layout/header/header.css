@@ -1,0 +1,312 @@
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 50px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  z-index: 100;
+}
+header nav {
+  display: grid;
+  grid-template-columns: var(--grid-col);
+  align-items: center;
+  justify-content: space-between;
+}
+/* Start Left */
+nav .left_nav .logo {
+  font-weight: 500;
+}
+/* End Left */
+/* Start Center */
+nav .center_nav {
+  height: 30px;
+  column-gap: 10px;
+}
+.center_nav .input_control {
+  flex-basis: 100%;
+  column-gap: 10px;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 4px;
+  padding: 6px;
+}
+nav .center_nav label {
+  color: #000;
+  display: flex;
+}
+nav .center_nav input {
+  flex-basis: 100%;
+}
+.dicrecttions_btn,
+.center_nav button.toggle_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 100%;
+  width: 22px;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: .3s linear;
+}
+/* start Rigth */
+nav .right_nav {
+  justify-content: flex-end;
+  column-gap: 30px;
+}
+nav .right_nav .notidications {
+  column-gap: 20px;
+  padding: 0 10px;
+}
+nav .right_nav .notidications > li > button,
+nav .right_nav .notidications > li {
+  display: flex;
+}
+nav .right_nav .notidications > li.active::after {
+  position: absolute;
+  content: '';
+  top: calc(100% - 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: #fff;
+}
+nav .right_nav .notidications > li > span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 10px;
+  user-select: none;
+  pointer-events: none;
+}
+nav .right_nav .user_name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+/* End Right */
+/* Start List Request Design */
+.list {
+  top: calc(100% + 10px);
+  right: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px 0px #dddddd;
+  height: 300px;
+  overflow-x: hidden;
+  min-width: 200px;
+  z-index: 1111;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 50px;
+}
+.list li {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  width: 100%;
+}
+.list li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.list span {
+  font-size: 14px;
+  white-space: pre;
+  color: #333;
+  font-weight: 500;
+}
+.list .name_img {
+  column-gap: 10px;
+}
+.list .btns {
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.list .btns button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: var(--main-color);
+  opacity: 50%;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s ease;
+  width: 100%;
+}
+.list .btns button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+.list .btns button.cancel {
+  background-color: #e24242;
+}
+.list .btns button:hover {
+  opacity: 1;
+}
+nav .right_nav .notidications .icons {
+  color: #fff;
+}
+.list .message {
+  color: #333;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.list .message.seen {
+  opacity: 50%;
+}
+nav .right_nav .notidications .list .message .icons {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  color: #000;
+}
+.dicrecttions_btn {
+  display: none;
+}
+/* End List Request Design */
+/* Start Media */
+/* Start Max-width: 1200px */
+@media(max-width: 1200px) {
+  nav .left_nav .logo {
+    font-size: 20px;
+  }
+  nav .center_nav {
+    height: 24px;
+  }
+  nav .right_nav {
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+  nav .right_nav .notidications .icons {
+    font-size: 18px;
+  }
+  nav .right_nav .notidications {
+    column-gap: 14px;
+    padding: 0  ;
+  }
+}
+/* End Max-width: 1200px */
+/* Start Max-width: 991px */
+@media(max-width: 991px) {
+  header .container {
+    grid-template-columns: 20% calc(40% - 8px) calc(40% - 8px);
+    gap: 8px;
+  }
+  /* nav .right_nav .notidications, */
+  nav .right_nav {
+    column-gap: 40px;
+    justify-content: flex-end;
+  }
+  nav .left_nav .logo {
+    font-size: 18px;
+  }
+  nav .center_nav label:focus {
+    color: red;
+  }
+  nav .right_nav .notidications .icons {
+    font-size: 16px;
+  }
+  .center_nav button.toggle_btn + .dicrecttions_btn {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    transition: .3s;
+  }
+  .center_nav button.toggle_btn + .dicrecttions_btn.rotate {
+    transform: rotate(180deg);
+  }
+}
+/* End Max-width: 991px */
+/* Start Max-width: 750px */
+@media(max-width: 750px) {
+  header .container {
+    grid-template-columns: auto 1fr;
+  }
+  .center_nav button.dicrecttions_btn.right {
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    transition: .8s;
+    transform: rotate(180deg);
+  }
+  .center_nav button.dicrecttions_btn.right.rotate {
+    transform: rotate(0);
+  }
+  nav .center_nav {
+    position: fixed;
+    top: 50px;
+    z-index: 100;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 7px 21px -2px #33333342;
+    flex-direction: row-reverse;
+  }
+  .dicrecttions_btn, .center_nav button.toggle_btn {
+    color: #333 !important;
+  }
+  .center_nav button.dicrecttions_btn:not(.right) {
+    order: 1;
+  }
+}
+/* End Max-width: 750px */
+/* Start Max-width: 600px */
+@media(max-width: 600px) {
+  nav .center_nav {
+    padding: 24px 12px;
+  }
+  nav .right_nav {
+    column-gap: 10px;
+  }
+  nav .right_nav .user_name {
+    margin-left: 5px;
+  }
+}
+/* End Max-width: 600px */
+/* MediaMAx-width: 380px */
+@media(max-width: 380px) {
+  .list {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.logout_btn button {
+  color: #fff;
+  font-size: 14px;
+  column-gap: 3px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.logout_btn button svg  {
+  font-size: 18px;
+}
+/* MediaMAx-width: 380px */
+/* End Media */

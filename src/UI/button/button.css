@@ -1,0 +1,12 @@
+.main_btn {
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--main-color);
+  color: #fff;
+  opacity: .5;
+  transition: .3s;
+  cursor: pointer;
+}
+.main_btn:hover {
+  opacity: 1;
+}

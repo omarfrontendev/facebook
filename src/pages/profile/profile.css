@@ -1,0 +1,203 @@
+.profile_wrapper {
+  display: grid;
+  width: calc( 88%);
+  grid-template-columns: calc(25% - 10px) calc(75%);
+  margin-left: 2.5%;
+  margin-top: 50px;
+  column-gap: 10px;
+  max-width: 1600px;
+  margin: 50px auto 0;
+}
+.user_imgs{
+  position: relative;
+}
+.user_imgs .cover {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.user_imgs .cover img {
+  object-fit: cover;
+  width: 110%;
+  height: 100%;
+}
+.user_imgs .cover label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+.user_imgs .cover label:hover {
+  background-color: #1a19194b;
+}
+.user_imgs .user_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+  margin-top: -70px;
+  margin-bottom: 40px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.user_data .user_profile_image {
+  position: relative;
+}
+.user_data .user_profile_image label {
+  position: absolute;
+  right: -8px;
+  top: 70%;
+  font-size: 32px;
+  color: #333;
+  cursor: pointer;
+}
+.user_data .user_profile_image + h1 +div {
+  justify-content: center;
+}
+.user_data .user_profile_image + h1 +div > div {
+  width: 100%;
+}
+.user_imgs .user_data input,
+.user_imgs .user_data input[placeholder],
+.user_imgs .user_data span {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #898989;
+  margin-top: -8px;
+  width: 100%;
+  text-align: center;
+}
+.user_posts_details .home_content {
+  padding: 0 0 20px;
+}
+.user_posts_details {
+  display: grid;
+  grid-template-columns: 67% calc(33% - 10px);
+  column-gap: 10px;
+}
+.user_rightbar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.user_rightbar h3 {
+  font-size: 16px;
+}
+.user_rightbar div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.user_rightbar p {
+  font-size: 14px;
+  color: #606060;
+  font-weight: 500;
+}
+.user_rightbar p input,
+.user_rightbar p span {
+  color: #a9a7a7;
+  font-weight: 400;
+  margin-left: 6px;
+}
+.user_rightbar p label {
+  cursor: pointer;
+}
+.user_rightbar > div > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+  gap: 20px 10px;
+}
+.user_rightbar > div > div > div {
+  cursor: pointer;
+}
+.user_rightbar > div > div img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* Start Media Max-width: 991px */
+@media(max-width: 991px) {
+  .profile_wrapper {
+    width: 100%;
+    padding: 0 24px;
+    grid-template-columns: 0% 100%;
+    gap: 0;
+  }
+  .user_imgs .cover img {
+    width: 110%;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 -5%;
+    transition: .3s linear;
+  }
+  .user_content.showLeftbar .user_imgs .cover img{
+    margin-left: 0;
+  }
+  .user_rightbar {
+    flex-basis: 30%;
+    margin-left: 0px;
+    transition: .3s linear;
+  }
+  .user_posts_details {
+    grid-template-columns: 70% calc(30% - 10px);
+    transition: .3s linear;
+  }
+  .user_content {
+    transition: .3s linear;
+  }
+  .user_content.showLeftbar {
+    transform: translateX(30%);
+  }
+  .user_content.showLeftbar .user_rightbar {
+    margin-left: 14px;
+  }
+}
+/* End Media Max-width: 991px */
+/* Start Media Max-width: 750px */
+@media(max-width: 750px) {
+  .profile_wrapper {
+    margin-top: 90px;
+  }
+  .profile .center_nav button.dicrecttions_btn.right {
+    display: none;
+  }
+}
+/* End Media Max-width: 750px */
+/* Start Media Max-width: 600px */
+@media(max-width: 600px) {
+  .profile .center_nav button.dicrecttions_btn.right {
+    display: flex;
+  }
+  .profile_wrapper {
+    padding: 0 12px;
+    grid-template-columns: 0% 100%;
+  }
+  .user_posts_details {
+    grid-template-columns: 100% 100%;
+    column-gap: 24px;
+  }
+  .user_content.showLeftbar {
+    transform: translateX(calc(100% + 12px));
+  }
+  .user_content.showRightbar {
+    transform: translateX(calc(-100% - 24px));
+  }
+  .user_content.showRightbar .user_imgs .cover img{
+    transform: translateX(-20px);
+  }
+  .user_rightbar {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    transform: translatex(calc(100% + 24px));
+    width: 100%;
+  }
+}
+/* End Media Max-width: 600px */

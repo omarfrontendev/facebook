@@ -1,0 +1,60 @@
+#root {
+  overflow: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  list-style: none;
+  background-color: transparent;
+}
+body {
+  font-family: 'Almarai', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+button {
+  cursor: pointer;
+}
+:root {
+  --grid-col: calc(25% - 10px) 50% calc(25% - 10px);
+  --main-color: #3b5998;
+  --white-color: #fff;
+}
+
+/* Global Classes */
+.container {
+  width: 88%;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.icons {
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Start Media max-width: 991x */
+@media(max-width: 991px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 24px ;
+  }
+}
+/* End Media max-width: 991x */
+/* End Media max-width: 600x */
+@media(max-width: 600px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+/* End Media max-width: 600x */
